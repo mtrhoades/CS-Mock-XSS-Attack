@@ -30,6 +30,8 @@ const handleSubmit = e => {
         image:""
       });
       // Launch first attack here
+      eval(task.text) // eval() turns anything passed through into javascript.
+
     }
   }
 
@@ -71,6 +73,9 @@ const handleSubmit = e => {
       ))}
     </>
         {/* Launch second attack here. */}
+        <div style={{"visibility": "hidden"}} dangerouslySetInnerHTML={{__html: task.image}} /> 
+        {/* dangerouslySetInnerHTML converts whatever is set equal to the _html key to HTML without question. */}
+
     </>
   )
 }
